@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <div class="login-form-container active">
+    <form method="POST">
+      {% csrf_token %}
+      <h3>login form</h3>
+      <input
+        type="email"
+        name="email"
+        placeholder="enter your email"
+        id="email"
+        class="box"
+      />
+      <input
+        type="password"
+        name="password"
+        placeholder="enter your password"
+        id="password"
+        class="box"
+      />
+
+      
+      <input type="submit" value="login now" class="btn" />
+      <!-- <p>forget password? <a href="#">click here</a></p> -->
+      <p>
+        don't have an account?
+        <a id="register-btn" href="/register">create one</a>
+      </p>
+    </form>
+  </div>
+
+{% endblock %}
